@@ -1,5 +1,11 @@
 ---
-
+const pageTitle = "About Me";
+const identity = {
+  firstName: "Chaitanya",
+  occupation: "Software Engineer",
+};
+const skills = ["HTML", "CSS", "JavaScript"];
+const happy = true;
 ---
 
 <html lang="en">
@@ -8,16 +14,18 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-	<a href="/">Home</a>
+    <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <h1>About me</h1>
-    <p>
-      I am working through Astro's introductory tutorial. This is the second
-      page on my website.
-    </p>
+    <h1>{pageTitle}</h1>
+    <p>My name is {identity.firstName} and I work as a {identity.occupation}.</p>
+	{happy && <p>I am happy to be learning to be learning Astro!</p>}
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
   </body>
 </html>
