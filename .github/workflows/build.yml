@@ -28,7 +28,6 @@ jobs:
       - name: Set up Google Cloud authentication
         uses: google-github-actions/auth@v2
         with:
-          # projects/YOUR_PROJECT_ID/locations/global/workloadIdentityPools/YOUR_POOL_NAME/providers/YOUR_PROVIDER_NAME
           workload_identity_provider: projects/51450984193/locations/global/workloadIdentityPools/github/providers/github
           audience: https://github.com/mchaitanya/astro-blog
           
