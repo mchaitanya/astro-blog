@@ -20,7 +20,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* nav styles */
+/* Nav styles */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -79,4 +79,23 @@ h1 {
   .hamburger {
     display: none;
   }
+}
+
+/* Tag styles */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1.15em;
+  background-color: #f8fcfd;
+}
+
+.tag > a {
+  color: #00539f;
 }

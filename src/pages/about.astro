@@ -12,18 +12,6 @@ const happy = true;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style is:global define:vars={{ skillColor }}>
-    /* Normally <style> is scoped to elements in this component
-       Setting is:global applies styles to all elements including those created in other components */
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
-    }
-  </style>
   <p>
     My name is {identity.firstName} and I work as a {identity.occupation}.
   </p>
@@ -33,3 +21,16 @@ const happy = true;
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
 </BaseLayout>
+
+<style is:global define:vars={{ skillColor }}>
+  /* Normally <style> is scoped to elements in this component
+     Setting is:global applies styles to all elements including those created in other components */
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+</style>
